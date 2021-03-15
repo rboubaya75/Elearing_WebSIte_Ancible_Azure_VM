@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(/static/assets/background.jpg);
+    background-size: cover;
+}
+
+#nav{
+    width: 100%;
+    height: 50px;
+    background: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+}
+
+.link:hover{
+    color:white;
+    animation: degrade 0.8s ease forwards;
+}
+
+@keyframes degrade{
+    0% {
+        background: linear-gradient(180deg, rgba(0,0,0,1), rgba(0,0,0,1) , rgba(0,0,0,1) );
+	}
+    25%{background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(73,66,23,1) 75%, rgba(255,220,0,1) 100%);
+    }
+	50% {
+		background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(32,30,16,1) 50%, rgba(255,220,0,1) 100%);
+	}
+    75%{
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(18,17,12,1) 30%, rgba(255,220,0,1) 100%);
+    }
+    100%{
+        color: black;
+        font-size: 34px;
+        font-weight: 700;
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(18,17,12,1) 0%, rgba(255,220,0,1) 50%);
+    }
+}
+
+h1, h2{
+    text-align: center;
+    margin: 20px;
+}
+
+.text_intro{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    position: relative;
+    bottom: -150px;
+    animation: sliding 2s linear forwards;
+}
+
+@keyframes sliding{
+    0%{bottom: -150px;}
+    100%{bottom: 0px; }
+}
+
+#slide_p{
+    overflow: hidden;
+    height: 75px;
+}
+
+#course{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+    margin: 20px;
+    height: 25vh;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    margin: 0 50px;
+    transition: 0.5s;
+}
+
+.logo:hover{
+    width: 150px;
+    height: 150px;
+    transform: rotate(360deg);
+}
+
+.container{
+    width: 80%;
+    background-color:rgba(0, 0, 0, 0.6);
+    margin: auto;
+    padding: 30px;
+    color: white;
+    border-radius: 30px;
+}
+
+.formulaire{
+    display: flex;
+    justify-content: space-around;
+}
+
+#left_side, #right_side {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.input_text, .category, .add_button{
+    height: 30px;
+    margin: 10px;
+}
+
+.add_button{
+    margin-top: 28px;
+}

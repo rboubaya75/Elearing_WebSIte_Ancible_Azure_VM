@@ -1,0 +1,80 @@
+- name: Application ELearning
+  hosts: VMAzure
+  remote_user: rachid
+  become: yes
+  become_method: sudo
+
+
+  tasks:
+
+    #- name: installation de postgres
+    #  apt: 
+    #    name: postgresql
+    #    update_cache: yes
+    #    state: latest
+
+    - name: Copier le dossier de mon repertoire
+      synchronize:
+      #path ou se trouve mon playbook
+        src: "{{ playbook_dir }}"
+      #path a la racine de ma VM
+        dest: ./
+    - name: installation de pip
+      apt:
+        name: python-pip
+        state: latest
+
+    - name: installation de pip3
+      apt:
+        name: python3-pip
+        state: latest
+
+    - name: Installation des packages python sur pip2
+      pip:
+        name: 
+          - psycopg2-binary
+          - Flask
+
+    - name: Installation des packages python sur pip3
+      pip:
+        name: 
+          - psycopg2-binary
+          - Flask
+        executable: pip3
+ 
+    - name: Modification du mot de passe de postgres
+      become: yes
+      become_method: sudo
+      become_user: postgres
+      postgresql_user: 
+        db: postgres
+        name: postgres
+        password: "123" 
+
+             #docker inst
+
+    - name: install packets 
+      apt:
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - gnupg-agent
+          - software-properties-common
+          - vim
+          - haveged
+    
+    - name: install packets 
+      apt:
+        name:
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
+    - name: install docker compose    
+      get_url:
+        url: https://github.com/docker/compose/releases/download/1.27.3/docker-compose-Linux-x86_64
+        dest: /usr/local/bin/docker-compose
+        mode: 755
+    
+
+   

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='python.css')}}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Python Courses</title>
+</head>
+  
+<body>
+  <nav id="nav">
+    <a href="/home" class="link">Home</a>
+    <a href="/javascript" class="link">JavaScript</a>
+    <a href="/python" class="link">Python</a>
+    <a href="/Azure" class="link">Azure</a>
+  </nav>
+
+<section id="course">
+<div class="box-container">
+  {%for i in range(0, len)%} 
+  <div class="box">
+      <p class="video_title">{{results[i][2]}}</p>
+      <iframe width="500" height="315" src="https://www.youtube.com/embed/{{results[i][3].split('/')[3]}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  {%endfor%}
+</div>
+</section>
+
+</body> 
+</html>

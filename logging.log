@@ -1,0 +1,16 @@
+2021-03-11 20:40:50,523: root :INFO:This is an info:
+2021-03-11 20:40:50,523: root :ERROR:This is an error:
+2021-03-11 20:41:16,435: root :INFO:This is an info:
+2021-03-11 20:41:16,435: root :ERROR:This is an error:
+2021-03-11 20:45:52,833: root :INFO:This is an info:
+2021-03-11 20:45:52,833: root :ERROR:This is an error:
+2021-03-11 20:46:37,072: root :INFO:This is an info:
+2021-03-11 20:46:37,073: root :ERROR:This is an error:
+2021-03-11 20:47:01,817: root :INFO:This is an info:
+2021-03-11 20:47:01,817: root :ERROR:This is an error:
+2021-03-11 20:49:15,199: root :INFO:This is an info:
+2021-03-11 20:49:15,199: root :ERROR:This is an error:
+2021-03-11 20:50:38,427: root :INFO:This is an info:
+2021-03-11 20:50:38,428: root :ERROR:This is an error:
+2021-03-11 20:50:38,434: root :INFO:Creating Table: start
+2021-03-11 20:50:38,465: root :INFO:Creating Table: end

@@ -1,0 +1,14 @@
+version: '3'
+services: 
+
+  elearning: 
+    container_name: elearning
+    build: .
+    image: elearning_flask 
+    restart: always
+
+    ports: 
+      - "4200:4200" 
+    environment: 
+      - FLASK_ENV=development 
+    command: ["python", "api.py"]

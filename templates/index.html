@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css')}}"> <!--double curly braces specific to Flask-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>My Classes</title>
+</head>
+<body>
+    <nav id="nav">
+        <a href="/home" class="link">Home</a>
+        <a href="/javascript" class="link">JavaScript</a>
+        <a href="/python" class="link">Python</a>
+        <a href="/azure" class="link">Azure</a>
+    </nav>
+    <section id="Presentation">
+        <h1>Welcome to our Cloud Classes !</h1>
+        <div id="slide_p">
+        <p class="text_intro">
+            This is where you can learn to be the Cloud developer of the future. 
+            Choose the course, language or technology you want to learn about and start your journey. 
+            You are more than welcome to add your own content if you find a great video on the web.
+            Let's start !
+        </p>
+        </div>
+    </section>
+
+    <section id="course">
+        <a href="/javascript">
+            <img class="logo" src="https://www.freepnglogos.com/uploads/javascript-png/javascript-shield-logo-icon-2.png"alt="">
+        </a>
+        <a href="/python">
+            <img class="logo" src="https://cdn.picpng.com/logo/language-logo-python-44976.png" alt="">
+        </a>
+        <a href="/azure">
+            <img class="logo" src="https://www.dbcloudbin.com/wp-content/uploads/2019/07/azure_logo_794_new.png" alt="">
+        </a>
+
+    </section>
+
+    <section id="Add_link">
+        <h2>Help us fill our content</h2>
+        <div class="container">
+            <form class="formulaire" action="/home" method="POST">
+                <div id="left_side">
+                    <label for="title">Enter the video's title:</label>
+                    <input class="input_text" type="text" name="title" id="" placeholder="Title">
+                    <label for="video_link">Copy the video's link:</label>
+                    <input class="input_text" type="text" name="video_link" id="" placeholder="Link">
+                </div>  
+
+                <div id="right_side">
+                    <label for="category">Select your category:</label>
+                    <select class="category" name="category" id="">
+                        <option value="Javascript">JavaScript</option>
+                        <option value="Python">Python</option>
+                        <option value="Azure">Azure</option>
+                    </select>
+                    <button type="submit" class="add_button">Add</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
